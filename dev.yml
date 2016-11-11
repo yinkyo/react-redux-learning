@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    working_dir: /app
+    volumes:
+      - "./:/app"
+      - /app/node_modules
+    ports:
+      - "8001:7770"
+    environment:
+      - NODE_ENV=development
+    command: npm start
