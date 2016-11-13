@@ -11,7 +11,7 @@ const Photo = (post) => (
 					alt={post.caption}
 					className='grid-photo' />
 			</Link>
-			<CSSTransitionGroup 
+			<CSSTransitionGroup
 				transitionName="like"
 				transitionEnterTimeout={500}
 				transitionLeaveTimeout={500}>
@@ -21,7 +21,9 @@ const Photo = (post) => (
 		<figcaption>
 			<p>{post.caption}</p>
 			<div className="control-buttons">
-				<button className="likes">&hearts; {post.likes}</button>
+				<button
+					onClick={post.onClick}
+					className="likes">&hearts; {post.likes}</button>
 				<Link className="button" to={`/view/${post.code}`}>
 					<span className="comment-count">
 						<span className="speech-bubble"></span>
