@@ -8,7 +8,7 @@ const PhotoDetail = (post) => (
       {...post} i={post.i}
       onClick={post.onClick}
       comment={post.comment} />
-    <Comments />
+    <Comments comments={post.comment} />
   </div>
 );
 
