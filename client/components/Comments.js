@@ -16,11 +16,6 @@ const Comments = ({comments}) => (
 				(comment, i) => <Comment
 					{...comment} key={i} i={i} />
 			)}
-	  <form ref="commentForm" className="comment-form">
-	  	<input type="text" ref="author" placeholder="author"/>
-	  	<input type="text" ref="comment" placeholder="comment"/>
-	  	<input type="submit" hidden />
-	  </form>
   </div>
 )
 

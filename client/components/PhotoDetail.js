@@ -1,6 +1,7 @@
 import React from 'react';
 import Photo from './Photo';
 import Comments from './Comments';
+import CommentFormContainer from './CommentFormContainer';
 
 const PhotoDetail = (post) => (
   <div className="single-photo">
@@ -9,6 +10,7 @@ const PhotoDetail = (post) => (
       onClick={post.onClick}
       comment={post.comment} />
     <Comments comments={post.comment} />
+    <CommentFormContainer />
   </div>
 );
 
